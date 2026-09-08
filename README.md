@@ -1,76 +1,196 @@
-# HireAI - AI-Powered Interview & Recruitment Platform
+# HireAI
 
-HireAI is a state-of-the-art recruitment platform designed to solve the **African Talent Paradox** by leveraging advanced AI to conduct, analyze, and audit candidate interviews. It features a unique dual-voice system supporting both English and Amharic, ensuring professional expression and data-driven hiring decisions.
+AI-powered interview and recruitment platform designed to make candidate evaluation more accessible, structured, and data-driven.
 
----
+HireAI combines AI-powered interviews, multilingual voice interaction, automated candidate analysis, and recruiter tools into a single recruitment workflow. The platform supports both English and Amharic to better serve diverse talent pools.
 
-## 🚀 Key Features
+## Features
 
-- **Dual-Voice AI Interviews**: Seamless switching between English (Voiceflow) and Amharic (Addis AI) to cater to diverse talent pools.
-- **Real-Time AI Analysis**: Powered by Gemini to provide instant auditing, scoring, and performance insights for every candidate.
-- **Premium User Experience**: Interactive interfaces with Lottie animations, smooth transitions, and a glassmorphism design aesthetic.
-- **Recruiter Dashboard**: Comprehensive campaign management, candidate tracking, and score auditing to ensure accountability.
-- **High-Fidelity Audio**: Integration with ElevenLabs for lifelike AI voices that build trust and engagement during interviews.
+- **Multilingual AI Interviews** — Conduct interviews in English and Amharic with seamless language switching.
+- **AI-Powered Candidate Analysis** — Analyze interview responses and generate candidate scores, insights, and performance evaluations using Google Gemini.
+- **Voice-Based Interviews** — Provide natural voice interactions using Voiceflow, Addis AI, and ElevenLabs.
+- **Recruiter Dashboard** — Manage recruitment campaigns, monitor candidates, and review interview results.
+- **Candidate Tracking** — Track candidates throughout the recruitment process and review their interview performance.
+- **Interview Auditing** — Provide structured scoring and analysis to support more consistent hiring decisions.
+- **Interactive UI** — Modern interface with smooth transitions, animations, and reusable components.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Framework**: [Flutter](https://flutter.dev/) (Cross-platform excellence)
-- **AI Orchestration**: [Voiceflow](https://www.voiceflow.com/) & [Addis AI](https://addisai.com/)
-- **Voice Synthesis**: [ElevenLabs](https://elevenlabs.io/)
-- **Intelligence Layer**: [Google Gemini AI](https://deepmind.google/technologies/gemini/)
-- **State Management**: [Provider](https://pub.dev/packages/provider)
-- **Visuals**: [Lottie](https://lottiefiles.com/) & [Animate Do](https://pub.dev/packages/animate_do)
+| Technology | Purpose |
+|---|---|
+| Flutter | Cross-platform application framework |
+| Dart | Programming language |
+| Voiceflow | AI interview orchestration and English voice interaction |
+| Addis AI | Amharic AI interaction |
+| ElevenLabs | AI voice synthesis |
+| Google Gemini | Candidate analysis and evaluation |
+| Provider | State management |
+| Lottie | UI animations |
+| Animate Do | UI animations and transitions |
 
-## 📂 Project Structure
+## Project Structure
 
-```bash
+```text
 lib/
-├── models/         # Data structures (JobCampaign, Candidate, etc.)
-├── screens/        # UI Layers (Company Dashboard, AI Interview, etc.)
-├── services/       # Core Logic (AI Routing, Voiceflow, Addis AI, ElevenLabs)
-├── theme/          # Premium design tokens and styles
-├── utils/          # Helper functions and constants
+├── models/         # Application data models
+├── screens/        # Application screens and UI layers
+├── services/       # AI, voice, and application services
+├── theme/          # Design tokens, themes, and styling
+├── utils/          # Helpers, constants, and utilities
 └── widgets/        # Reusable UI components
 ```
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Flutter SDK (^3.7.0)
-- API Keys for Voiceflow, ElevenLabs, and Gemini.
+Before running the project, make sure you have:
+
+- Flutter SDK 3.7.0 or later
+- Dart SDK compatible with the installed Flutter version
+- Android Studio or Visual Studio Code
+- API credentials for the required AI and voice services
 
 ### Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Minas-27/HireAI.git
-   cd hire_ai
-   ```
+Clone the repository:
 
-2. **Configure Environment Variables**:
-   Create a `.env` file in the root directory and add your keys:
-   ```env
-   VOICEFLOW_API_KEY=your_key
-   ELEVENLABS_API_KEY=your_key
-   GEMINI_API_KEY=your_key
-   ADDIS_AI_API_KEY=your_key
-   ```
+```bash
+git clone https://github.com/Minas-27/HireAI.git
+cd HireAI
+```
 
-3. **Install Dependencies**:
-   ```bash
-   flutter pub get
-   ```
+Install the project dependencies:
 
-4. **Run the App**:
-   ```bash
-   flutter run
-   ```
+```bash
+flutter pub get
+```
 
-## 🌍 Vision: The African Talent Paradox
+### Environment Configuration
 
-HireAI is built specifically to bridge the gap between talented individuals in Africa and global opportunities. By providing a platform where candidates can express themselves professionally in their native languages while being audited by objective AI, we eliminate hiring bias and uncover hidden gems in the workforce.
+Create a `.env` file in the project root and configure the required API credentials:
 
----
+```env
+VOICEFLOW_API_KEY=your_key
+ELEVENLABS_API_KEY=your_key
+GEMINI_API_KEY=your_key
+ADDIS_AI_API_KEY=your_key
+```
 
-Built with ❤️ for the future of African recruitment.
+Do not commit `.env` or any file containing API credentials to the repository.
+
+### Run the Application
+
+```bash
+flutter run
+```
+
+## Application Workflow
+
+HireAI is designed around a structured recruitment workflow:
+
+```text
+Recruiter
+   |
+   v
+Create Recruitment Campaign
+   |
+   v
+Candidate
+   |
+   v
+AI-Powered Interview
+   |
+   +----------------------+
+   |                      |
+   v                      v
+English                Amharic
+Voiceflow              Addis AI
+   |                      |
+   +----------+-----------+
+              |
+              v
+       Interview Analysis
+              |
+              v
+        Gemini Evaluation
+              |
+              v
+     Candidate Score & Insights
+              |
+              v
+       Recruiter Dashboard
+```
+
+## Vision
+
+HireAI aims to improve access to professional recruitment opportunities across Africa by combining multilingual AI interviews with structured candidate evaluation.
+
+The platform is designed to help candidates communicate naturally in languages they are comfortable with while giving recruiters consistent tools for evaluating interview performance.
+
+By supporting both English and Amharic voice interactions, HireAI addresses an important challenge in multilingual recruitment: enabling candidates to demonstrate their skills without language becoming an unnecessary barrier.
+
+## Roadmap
+
+- [x] AI-powered interview workflow
+- [x] English voice interaction
+- [x] Amharic voice interaction
+- [x] AI-powered candidate analysis
+- [x] Candidate scoring
+- [x] Recruiter dashboard
+- [x] Recruitment campaign management
+- [x] Candidate tracking
+- [ ] Expanded African language support
+- [ ] Advanced candidate analytics
+- [ ] Interview recording and review
+- [ ] Automated recruitment reports
+- [ ] Web-based recruiter dashboard
+- [ ] Production deployment
+
+## Contributing
+
+Contributions and improvements are welcome.
+
+1. Fork the repository.
+2. Create a feature branch:
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes:
+
+```bash
+git commit -m "Add AmazingFeature"
+```
+
+4. Push your branch:
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+5. Open a Pull Request.
+
+Please ensure that API keys and other sensitive configuration values are never committed to the repository.
+
+## License
+
+This project is currently maintained by the project team. Licensing information will be added as the project reaches its public release stage.
+
+## Author
+
+**Minas (Abraham Addisu)**
+
+- GitHub: [@Minas-27](https://github.com/Minas-27)
+- LinkedIn: [Abraham Addisu](https://www.linkedin.com/in/abraham-addisu-b39b08338)
+
+## Acknowledgments
+
+- Flutter
+- Google Gemini
+- Google ML Kit and AI ecosystem
+- Voiceflow
+- Addis AI
+- ElevenLabs
+- Flutter open-source community
